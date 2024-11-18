@@ -1,0 +1,258 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background: var(--primery-color);    
+    color: white;
+}
+
+:root{
+    --primery-color :#1E3E62;
+    --secondry-color:#002141;
+    --third-color:#FF6500;
+}
+
+.heading{
+    text-align: center;
+    margin: 150px auto 50px;
+    font-size:20px;
+}
+
+#search-box{
+    text-align: center;
+}
+
+form{
+    width: 90%; 
+    max-width: 600px;
+    margin: auto;
+    height: 80px;
+    background-color: var(--secondry-color);
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+form input{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: white;
+    font-size: 18px;
+    padding: 0 30px;
+    flex: 1;
+    height: 100%;
+}
+
+form button{
+    border: 0; 
+    outline: 0;
+    color: white;
+    background-color: var(--third-color);
+    height: 100%;
+    padding: 0 40px;
+    font-size: 18px;
+    font-weight: 600;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+
+::placeholder{
+    font-size: 18px;
+    color: white;
+}
+
+#show-more{
+    background-color: var(--third-color);
+    color: white;
+    border: 0;
+    outline: 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 10px auto 100px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    display: none;
+}
+
+#search-result{
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+}
+
+#search-result img{
+    width: 100%; 
+    height: 230px;
+    object-fit: cover;
+    border-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 16px;
+        margin: 100px auto 30px;
+    }
+    form {
+        height: 60px;
+    }
+    form input, form button {
+        font-size: 14px;
+    }
+    #search-result img {
+        height: 180px;
+    }
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+}
+body {
+    height: 100%;
+    width: 100%;
+    background: var(--primery-color);
+    color: white;
+}
+
+:root {
+    --primery-color: #1E3E62;
+    --secondry-color: #002141;
+    --third-color: #FF6500;
+}
+
+.heading {
+    text-align: center;
+    margin: 150px auto 50px;
+    font-size: 20px;
+}
+
+#search-box {
+    text-align: center;
+}
+
+form {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    height: 80px;
+    background-color: var(--secondry-color);
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+form input {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: white;
+    font-size: 18px;
+    padding: 0 30px;
+    flex: 1;
+    height: 100%;
+}
+
+form button {
+    border: 0;
+    outline: 0;
+    color: white;
+    background-color: var(--third-color);
+    height: 100%;
+    padding: 0 40px;
+    font-size: 18px;
+    font-weight: 600;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+
+::placeholder {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#show-more {
+    background-color: var(--third-color);
+    color: white;
+    border: 0;
+    outline: 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 10px auto 100px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    display: none;
+}
+
+#search-result {
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+}
+
+#search-result img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-bottom: 5px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 16px;
+        margin: 100px auto 30px;
+    }
+    form {
+        height: 60px;
+    }
+    form input, form button {
+        font-size: 14px;
+        padding: 0 20px;
+    }
+    #search-result {
+        width: 90%;
+        grid-gap: 20px;
+    }
+    #search-result img {
+        height: 180px;
+    }
+    #show-more {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 14px;
+        margin: 80px auto 20px;
+    }
+    form {
+        height: 50px;
+    }
+    form input, form button {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+    #search-result img {
+        height: 150px;
+    }
+}
